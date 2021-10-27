@@ -1,0 +1,12 @@
+﻿<link rel="stylesheet" href="ItemDisplay.scss">
+
+<root>
+    <div class="iconContainer">
+        <div @ref="Icon" class="icon"></div>
+    </div>
+    <div class="contentContainer">
+        <label @ref="Description" class="description"></label>
+        <button @ref="UseButton" class="use" onclick="UseItem()"></button>
+        <button @ref="DropButton" class="drop" onclick="DropItem()"></button>
+    </div>
+</root>

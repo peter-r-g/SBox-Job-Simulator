@@ -1,0 +1,58 @@
+﻿CharacterInfo
+{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
+    .character
+    {
+        width: 100%;
+        height: 80%;
+    }
+
+    .characterInfo
+    {
+        display: flex;
+        width: 100%;
+        height: 20%;
+
+        flex-grow: 1;
+        flex-direction: column;
+
+        .entry
+        {
+            width: 100%;
+            height: 25%;
+
+            &.disabled
+            {
+                display: none;
+            }
+        }
+
+        .icon
+        {
+            height: 100%;
+            width: 10%;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .characterName .icon { background-image: url("/textures/ui/character.png"); }
+        .characterJob .icon { background-image: url("/textures/ui/job.png"); }
+        .characterMoney .icon { background-image: url("/textures/ui/money.png"); }
+        .characterHealth .icon { background-image: url("/textures/ui/health.png"); }
+
+        Label
+        {
+            width: 80%;
+            height: 100%;
+            font-family: Roboto;
+            font-size: 32px;
+            font-weight: bold;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+    }
+}

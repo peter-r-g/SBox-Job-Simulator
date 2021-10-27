@@ -1,0 +1,65 @@
+﻿$MaxWidth: 1000px;
+$FontSize: 32px;
+$FontFamily: Robot;
+$FontWeight: bold;
+
+$MoneyColor: white;
+$PositiveMoneyColor: lawngreen;
+$NegativeMoneyColor: red;
+
+MoneyDisplay
+{
+    display: flex;
+    position: absolute;
+    width: $MaxWidth;
+
+    right: 10px;
+    top: 10px;
+
+    flex-grow: 1;
+    flex-direction: column;
+
+    div.moneyContainer
+    {
+        width: 100%;
+        height: $FontSize;
+
+        &.hidden
+        {
+            display: none;
+        }
+    }
+    
+    Label.money
+    {
+        width: 100%;
+        height: $FontSize;
+
+        font-size: $FontSize;
+        font-family: $FontFamily;
+        font-weight: $FontWeight;
+
+        text-shadow: 0 0 3px black;
+        text-align: right;
+    }
+
+    Label.totalMoney
+    {
+        color: $MoneyColor;
+    }
+
+    Label.positiveMoney
+    {
+        color: $PositiveMoneyColor;
+    }
+
+    Label.negativeMoney
+    {
+        color: $NegativeMoneyColor;
+    }
+
+    &.hidden
+    {
+        opacity: 0;
+    }
+}

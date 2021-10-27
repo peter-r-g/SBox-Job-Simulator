@@ -1,0 +1,48 @@
+﻿$StartTextColor: white;
+$StartFont: Arial;
+$StartFontSize: 20px;
+$StartFontWeight: bold;
+$BaseSize: 128px;
+
+WaypointDisplay
+{
+    display: flex;
+    position: absolute;
+    width: $BaseSize;
+    height: $BaseSize + $StartFontSize;
+
+    flex-grow: 1;
+    flex-direction: column;
+
+    .marker
+    {
+        width: 100%;
+        height: $BaseSize;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .distance
+    {
+        width: 100%;
+        height: $StartFontSize; // Overwritten in WaypointDisplay.cs
+
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        font-size: $StartFontSize; // Overwritten in WaypointDisplay.cs
+        font-family: $StartFont; // Overwritten in WaypointDisplay.cs
+        font-weight: $StartFontWeight; // Overwritten in WaypointDisplay.cs
+        color: $StartTextColor; // Overwritten in WaypointDisplay.cs
+
+        &.hidden
+        {
+            opacity: 0;
+        }
+    }
+
+    &.hidden
+    {
+        opacity: 0;
+    }
+}
